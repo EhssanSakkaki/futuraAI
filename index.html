@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futura AI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container hidden">
+        <h1>Futura AI</h1>
+
+        <div class="subtitle">
+            <span class="line line-1">Complete objectives</span>
+            <span class="line line-2">Earn Instantly</span>
+        </div>
+
+        <a href="join.html" class="cta-button">Join</a>
+    </div>
+
+<script>
+    setTimeout(() => {
+        document.getElementById("loader").classList.add("fade-out");
+        document.querySelector(".container").classList.remove("hidden");
+    }, 2000);
+</script>
+
+</body>
+</html>
+``

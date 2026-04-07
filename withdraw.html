@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Withdraw</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container hidden">
+        <h1></h1>
+
+        <div class="subtitle">
+            <span class="line line-1">Level 2 Weekly Earnings</span>
+            <span class="line line-2">≈ $4,800</span>
+        </div>
+
+        <a href="submit.html" class="cta-button">Accept terms and conditions</a>
+    </div>
+
+<script>
+    setTimeout(() => {
+        document.getElementById("loader").classList.add("fade-out");
+        document.querySelector(".container").classList.remove("hidden");
+    }, 3000);
+</script>
+
+</body>
+</html>
+``
