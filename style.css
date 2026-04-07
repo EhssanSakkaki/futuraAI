@@ -1,0 +1,163 @@
+
+/* style.css */
+
+/* Import Roboto from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Load Aquire font (you must include the font file in your project) */
+@font-face {
+    font-family: 'Aquire';
+    src: url('fonts/AquireBold-8Ma60.otf') format('woff2'),
+         url('fonts/AquireLight-YzE0o.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background:
+        radial-gradient(
+            ellipse 160% 80vh at 100% 0%,
+            rgba(174, 0, 255, 0.22),
+            rgba(124, 0, 182, 0.22) 50%,
+            transparent 85%
+        ),
+        black;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+/* Container */
+.container {
+    text-align: center;
+}
+
+/* Main heading */
+h1 {
+    color: white;
+    font-family: 'Aquire', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+
+/* Subtitle container */
+.subtitle {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    white-space: nowrap;        /* FORCE one line */
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+/* Subtitle lines */
+.subtitle .line {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+
+    /* Responsive shrinking */
+    font-size: clamp(0.65rem, 1.1vw, 1.1rem);
+
+    opacity: 0;
+    animation: subtitleFade 1.5s forwards;
+}
+
+/* Consecutive delays */
+.subtitle .line-1 {
+    animation-delay: 1.8s;
+}
+
+.subtitle .line-2 {
+    animation-delay: 2.6s;
+}
+
+
+/* Button */
+.cta-button {
+    display: inline-block;
+    padding: 14px 42px;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 3em auto 1em;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    animation: buttonFade 1.2s forwards;
+    animation-delay: 4.6s;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+        
+}
+
+/* Click & hover animation */
+.cta-button:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.cta-button:active {
+    transform: scale(0.96);
+    box-shadow: 0 0 18px rgba(174,0,255,0.45);
+}
+
+
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes subtitleFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }  
+
+@keyframes buttonFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+
+}
+
+
+
